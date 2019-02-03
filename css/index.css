@@ -1,0 +1,28 @@
+.main-container{
+  width: 350px;
+  margin: 20px auto 0px auto;
+}
+
+#email{
+  z-index: -1;
+  position: relative;
+  top: -38px;
+  transition: all 0.25s ease-out;
+}
+
+#submit{
+  transition: all 0.25s ease-out;
+  position: relative;
+  top: -38px;
+}
+
+#signup{
+  transition: all 0.25s ease-out;
+  position: relative;
+  top: -38px;
+}
+
+#banner h1{
+  max-width: 33px;
+  transition: all 1.5s ease-out;
+}
