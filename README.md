@@ -1,7 +1,7 @@
-# dnd_tools
+# Howard's dnd_tools
 Some organizational tools for my dungeons and dragons 5e campaign
 
-#Questions?:
+# Questions?:
 
 ## Why?
 Mostly to practice my PHP skills. I'd like to use node.js but I really don't have the time to learn that at the moment
