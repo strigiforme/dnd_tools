@@ -21,10 +21,14 @@ h1{
 .text-light { color: #D8D8D8; }
 .text-dark { color: #222222; }
 .text-blue { color: #043e6d; }
+.text-green { color: #4BB543; }
+.text-red { color: red; }
 
-.background-light { background-color : #D8D8D8; }
-.background-dark { background-color: #222222; }
-.background-blue { background-color: #043e6d; }
+.bg-light { background-color : #D8D8D8; }
+.bg-dark { background-color: #222222; }
+.bg-blue { background-color: #043e6d; }
+.bg-green { background-color: #4BB543; }
+.bg-red { background-color: red; }
 
 .font-small { font-size: 0.5em; }
 .font-small { font-size: 1em; }

@@ -1,9 +1,10 @@
 <?php
   include "includes/db_local.php";
+  include "includes/functions.php";
 
   if(isset($_POST['submit'])){
     // Account creation requested
-    if(isset($_POST['email'])){
+    if(isset($_POST['email']) && $_POST['email'] != ""){
       //Check if account exists first
       if(!($check_login = $conn->prepare("SELECT * FROM dnd_login WHERE login_email = (?)"))){
         echo "SQL Prepare failed: (" . $conn->errno . ") " . $conn->error;
@@ -17,12 +18,16 @@
             $result = $check_login->get_result();
             if($result->num_rows == 0){
               //create account, as email doesn't exist
+              submit_user($_POST['username'],$_POST['password'],$_POST['email'],$conn);
             } else {
-              //inform user email is already registered
+              $login_result = "<p class = 'text-red'> Email is already registered. </p>";
             }
           }
         }
       }
+    } else {
+      //log user in regularly
+      $login_result = login_user($_POST['username'],$_POST['password'],$conn);
     }
   }
 
@@ -66,6 +71,7 @@
         </div>
       </form>
       <button id = "signup" class = "btn primary-font bg-lightblue" onclick = "login()"> Sign Up </button>
+      <?php if(isset($login_result)){echo $login_result;} ?>
     </div>
   </body>
 </html>
