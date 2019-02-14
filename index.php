@@ -53,8 +53,8 @@
     <script src="js/scripts.js"></script>
 
 </head>
-  <body>
-    <div class = "flex text-center flex-center column half-width main-container">
+  <body class = "grid three-sections">
+    <div class = "col-2">
       <h1 class = "title block m-auto m-bottom-15"> Howard's 5e Tools </h1>
       <form method = "POST">
         <div class = "input-container">
@@ -71,7 +71,14 @@
         </div>
       </form>
       <button id = "signup" class = "btn primary-font bg-lightblue" onclick = "login()"> Sign Up </button>
-      <?php if(isset($login_result)){echo $login_result;} ?>
+      <div class = "flex flex-center">
+          <?php if(isset($login_result)){echo $login_result;} ?>
+      </div>
+    </div>
+    <div class = "col-3">
+      <div>
+
+      </div>
     </div>
   </body>
 </html>

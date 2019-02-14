@@ -23,6 +23,7 @@
     transition: 0.25s;
     letter-spacing: 1px;
 }
+
 .btn:focus{
     outline: none;
     -webkit-appearance: none;

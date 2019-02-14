@@ -53,7 +53,7 @@ function login_user($user,$pass,$conn){
           while($row = $result->fetch_assoc()){
             $db_password = $row['login_password'];
             if(password_verify($password,$db_password)){
-              return "<p class = 'text-green'> Login Success! </p>";
+              header("Location:dnd_home.php");
             } else {
               return "<p class = 'text-red'> Email / Password incorrect. </p>";
             }
