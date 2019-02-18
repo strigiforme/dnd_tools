@@ -14,9 +14,15 @@
   overflow: hidden;
 }
 
+
 .three-sections{
   grid-template-columns: auto 350px auto;
   grid-template-rows: 100%;
+}
+
+.col-1-3{
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 .col-1{

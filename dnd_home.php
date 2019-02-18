@@ -1,25 +1,19 @@
+<?php
+
+  include "includes/header.php";
+
+?>
 <!DOCTYPE html>
 <html>
-  <head>
-    <title> DND Tools </title>
-    <meta charset = "utf-8" />
+  <?php include "includes/head.html"; ?>
+  <body class = "grid header-three-sections">
+    <div class = "col-1-3 banner flex flex-center-vertical p-left-10 m-bottom-10">
+      <h1 class = "primary-font banner-title"> D&D Tools </h1>
+    </div>
+    <div id = "login-panel">
+    </div>
+    <div class = "col-2s">
 
-    <!-- Font and package imports -->
-    <script src="https://threejs.org/build/three.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
-
-    <!-- CSS imports -->
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="css/color.css">
-    <link rel="stylesheet" type="text/css" href="css/controls.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="stylesheet" type="text/css" href="css/text.css">
-
-    <!-- Javascript -->
-    <script src="js/scripts.js"></script>
-
-</head>
-  <body class = "grid three-sections">
-
+    </div>
   </body>
 </html>

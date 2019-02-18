@@ -1,6 +1,5 @@
 <?php
-  include "includes/db_local.php";
-  include "includes/functions.php";
+  include "includes/header.php";
 
   if(isset($_POST['submit'])){
     // Account creation requested
@@ -34,25 +33,7 @@
 ?>
 <!DOCTYPE html>
 <html>
-  <head>
-    <title> DND Tools </title>
-    <meta charset = "utf-8" />
-
-    <!-- Font and package imports -->
-    <script src="https://threejs.org/build/three.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
-
-    <!-- CSS imports -->
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="css/color.css">
-    <link rel="stylesheet" type="text/css" href="css/controls.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="stylesheet" type="text/css" href="css/text.css">
-
-    <!-- Javascript -->
-    <script src="js/scripts.js"></script>
-
-</head>
+  <?php include "includes/head.html"; ?>
   <body class = "grid three-sections">
     <div class = "col-2">
       <h1 class = "title block m-auto m-bottom-15"> Howard's 5e Tools </h1>
@@ -67,10 +48,10 @@
           <input id = "email" class = "form-input primary-font" name = "email" type = "input" placeholder="Email"/>
         </div>
         <div>
-          <input id = "submit" name = "submit" class = "btn primary-font bg-red m-bottom-10" type = "submit" value = "Continue"/>
+          <input id = "submit" name = "submit" class = "btn secondary-font bg-red m-bottom-10" type = "submit" value = "Continue"/>
         </div>
       </form>
-      <button id = "signup" class = "btn primary-font bg-lightblue" onclick = "login()"> Sign Up </button>
+      <button id = "signup" class = "btn secondary-font bg-lightblue" onclick = "login()"> Sign Up </button>
       <div class = "flex flex-center">
           <?php if(isset($login_result)){echo $login_result;} ?>
       </div>

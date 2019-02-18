@@ -9,10 +9,8 @@ a {
   font-weight: 200;
 }
 
-.primary-font {
-  font-family: "PT Serif";
-  font-weight: 200;
-}
+.primary-font { font-family: "PT Serif"; }
+.secondary-font{ font-family: "Raleway"; }
 
 h1{
   font-size: 40px;
