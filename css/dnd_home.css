@@ -1,0 +1,21 @@
+.header-three-sections{
+  grid-template-columns: auto 350px auto;
+  grid-template-rows: 70px auto;
+}
+
+.banner{ background-color: #003366; }
+
+.banner-title{
+  color: white;
+  margin: 0px;
+  font-weight: 200;
+}
+
+#login-panel{
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: #CCCCCC;
+  max-width: 300px;
+}
