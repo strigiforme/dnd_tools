@@ -10,6 +10,9 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] = TRUE){
   <body class = "grid header-three-sections">
     <div class = "col-1-3 banner flex flex-center-vertical p-left-10 m-bottom-10">
       <h1 class = "primary-font banner-title"> D&D Tools </h1>
+      <div class = "login-status">
+        <p class = "text-light"> Logged in as <?php echo $_SESSION['username']; ?> </p>
+      </div>
     </div>
     <div id = "content-panel" class = "flex column p-10">
       <div id = "characters">
@@ -49,6 +52,8 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] = TRUE){
     </div>
     <div class = "col-2-3 m-left-10 home p-10">
       <h2 class = "mainbody-header"> Notifications </h2>
+      <hr/>
+      <h2 class = "mainbody-header"> Sessions </h2>
       <hr/>
     </div>
   </body>
