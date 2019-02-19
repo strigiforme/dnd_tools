@@ -54,6 +54,7 @@ function login_user($user,$pass,$conn){
             $db_password = $row['login_password'];
             if(password_verify($password,$db_password)){
               $_SESSION['loggedin'] = TRUE;
+              $_SESSION['username'] = $row['login_username'];
               $_SESSION['user_id'] = $row['login_id'];
               $_SESSION['last_login'] = getdate();
               header("Location:dnd_home.php");

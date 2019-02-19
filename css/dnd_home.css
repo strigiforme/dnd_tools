@@ -1,9 +1,47 @@
+.mainbody-header{
+  font-size: 30px;
+  font-weight: 200;
+  margin: 0px;
+}
+
+.home{
+  border-left: 10px solid red;
+  border-radius: 2px;
+  background-color: #DDD;
+}
+
+.bubble{
+  width: 100%;
+  min-height: 50px;
+  border-radius: 5px;
+  background-color: #CDCDCD;
+  margin-bottom: 5px;
+}
+
+.bubble-title{
+  font-family: "PT Serif";
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0px;
+}
+
+.bubble-data{
+  margin-left: 25px;
+  padding-top: 2px;
+  font-family: "Raleway";
+  font-size: 14px;
+  font-weight: 400;
+}
+
 .header-three-sections{
-  grid-template-columns: auto 350px auto;
+  grid-template-columns: 300px 350px auto;
   grid-template-rows: 70px auto;
 }
 
-.banner{ background-color: #003366; }
+.banner{
+  background-color: #003366;
+  border-radius: 2px;
+}
 
 .banner-title{
   color: white;
@@ -11,11 +49,12 @@
   font-weight: 200;
 }
 
-#login-panel{
+#content-panel{
+  border-radius: 2px;
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: 3;
-  background-color: #CCCCCC;
+  background-color: #DDD;
   max-width: 300px;
 }
