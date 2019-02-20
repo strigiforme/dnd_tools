@@ -14,11 +14,30 @@
   overflow: hidden;
 }
 
-.grid *{
-  min-width: 0;
-  min-height: 0;
-  overflow: hidden;
-  max-height: 100%;
+.three-sections{
+  grid-template-columns: auto 350px auto;
+  grid-template-rows: 100%;
+}
+.col-2-3{
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+.col-1-3{
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.col-1{
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.col-2{
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.col-3{
+  grid-column-start: 3;
+  grid-column-end: 4;
 }
 
 /* these sets of styles handle the 50 50 grid setup*/
@@ -170,6 +189,10 @@
 /* Flexbox styles */
 
 .flex { display: flex; }
+
+.flex-right{
+  flex-direction: row-reverse;
+}
 
 .column {
   -webkit-flex-direction: column;

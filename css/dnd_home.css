@@ -1,0 +1,78 @@
+#characters{
+  background-color: rgba(0,200,0,0.5);
+}
+#campaigns{
+  background-color: rgba(255,0,0,0.5);
+}
+#homebrew{
+  background-color: rgba(200,200,0,0.5);
+}
+#users{
+  background-color: rgba(100,100,255,0.5);
+}
+.mainbody-header{
+  font-size: 30px;
+  font-weight: 200;
+  margin: 0px;
+}
+
+.home{
+  border-left: 10px solid red;
+  border-radius: 2px;
+  background-color: #DDD;
+}
+
+.bubble{
+  width: 100%;
+  min-height: 50px;
+  border-radius: 5px;
+  background-color: #CDCDCD;
+  margin-bottom: 5px;
+}
+
+.bubble-title{
+  font-family: "PT Serif";
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0px;
+}
+
+.bubble-data{
+  margin-left: 25px;
+  padding-top: 2px;
+  font-family: "Raleway";
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.header-three-sections{
+  grid-template-columns: 300px 350px auto;
+  grid-template-rows: 70px auto;
+}
+
+.banner{
+  background-color: #003366;
+  border-radius: 2px;
+}
+
+.banner-title{
+  color: white;
+  margin: 0px;
+  font-weight: 200;
+}
+
+#content-panel{
+  border-radius: 2px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: #DDD;
+  max-width: 300px;
+}
+
+#content-panel div{
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
