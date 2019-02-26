@@ -14,10 +14,8 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] = TRUE){
         <div class = "login-status m-10">
           <p class = "text-light"> Logged in as <?php echo $_SESSION['username']; ?> </p>
         </div>
-        <div class="hamburger">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
+        <div class="hamburger" onclick = "shownav()">
+          <i class="fas fa-bars fa-3x" style = "color:white;"></i>
         </div>
       </div>
     </div>
@@ -63,6 +61,9 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] = TRUE){
       <hr/>
       <h2 class = "mainbody-header"> Sessions </h2>
       <hr/>
+    </div>
+    <div class = "navbar" id = "mainnav">
+      <i class="fas fa-times fa-2x" id = "close" style = "color:white;" onclick = "hidenav()"></i>
     </div>
   </body>
 </html>

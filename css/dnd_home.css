@@ -1,14 +1,22 @@
-
-.hamburger .line{
-  width: 50px;
-  height: 5px;
-  background-color: white;
-  display: block;
-  margin: 8px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+/* Navbar - should be in a different CSS file */
+.navbar{
+  position: absolute;
+  right: -350px;
+  transition: 0.35s ease-out;
+  background-color: #BB0000;
+  height: 100%;
+  width: 350px;
 }
+
+#close:hover{
+    cursor: pointer;
+}
+#close{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+/* Hamburger - should be in own CSS file later */
 
 .hamburger:hover{
   cursor: pointer;
@@ -17,6 +25,9 @@
 .hamburger{
   margin: 0px 15px;
 }
+
+
+/* Cool scrollbar - also should be in own file */
 
 #content-panel::-webkit-scrollbar-track{
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -35,18 +46,7 @@
 	background-color: gray;
 }
 
-#characters{
-  background-color: #BB0000;
-}
-#campaigns{
-  background-color: #BB0000;
-}
-#homebrew{
-  background-color: #BB0000;
-}
-#users{
-  background-color: #BB0000;
-}
+/* Bubbles - belong in another style file */
 
 .mainbody-header{
   font-size: 30px;
@@ -55,7 +55,7 @@
 }
 
 .home{
-  border-left: 10px solid #BB0000;
+  border-left: 10px solid #333;
   border-radius: 2px;
   background-color: #DDD;
 }
@@ -64,6 +64,7 @@
   border-radius: 5px;
   margin-bottom: 10px;
   padding: 5px;
+  background-color: #BB0000;
 }
 
 .bubble{
@@ -92,13 +93,15 @@
   font-weight: 400;
 }
 
+/* Actual styles unique to this page */
+
 .header-three-sections{
   grid-template-columns: 300px 350px auto;
   grid-template-rows: 70px auto;
 }
 
 .banner{
-  background-color: #003366;
+  background-color: #333;
   border-radius: 2px;
 }
 
