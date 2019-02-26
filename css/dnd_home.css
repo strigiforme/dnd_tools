@@ -1,15 +1,56 @@
-#characters{
-  background-color: rgba(0,200,0,0.5);
+.hamburger .line{
+  width: 50px;
+  height: 5px;
+  background-color: #ecf0f1;
+  display: block;
+  margin: 8px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-#campaigns{
-  background-color: rgba(255,0,0,0.5);
+
+.hamburger:hover{
+  cursor: pointer;
 }
-#homebrew{
-  background-color: rgba(200,200,0,0.5);
+
+.hamburger{
+  justify-content: flex-end;
 }
-#users{
-  background-color: rgba(100,100,255,0.5);
+
+#content-panel::-webkit-scrollbar-track{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 0px 2px;
+	background-color: #F5F5F5;
 }
+
+#content-panel::-webkit-scrollbar{
+	width: 5px;
+	background-color: #F5F5F5;
+}
+
+#content-panel::-webkit-scrollbar-thumb{
+	border-radius: 0px 2px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: silver;
+}
+
+#characters div{
+  background-color: #35B234;
+}
+#campaigns div{
+  background-color: #cc0000;
+}
+#homebrew div{
+  background-color: #D3AF37;
+}
+#users div{
+  background-color: #003366;
+}
+.bubble-container{
+    background-color: #CDCDCD;
+    box-shadow: inset 0px 0px 5px #AAA;
+}
+
 .mainbody-header{
   font-size: 30px;
   font-weight: 200;
@@ -17,7 +58,7 @@
 }
 
 .home{
-  border-left: 10px solid red;
+  border-left: 10px solid #cc0000;
   border-radius: 2px;
   background-color: #DDD;
 }
@@ -26,7 +67,6 @@
   width: 100%;
   min-height: 50px;
   border-radius: 5px;
-  background-color: #CDCDCD;
   margin-bottom: 5px;
 }
 
@@ -40,6 +80,7 @@
 .bubble-data{
   margin-left: 25px;
   padding-top: 2px;
+  color: WhiteSmoke;
   font-family: "Raleway";
   font-size: 14px;
   font-weight: 400;
@@ -69,6 +110,7 @@
   grid-row-end: 3;
   background-color: #DDD;
   max-width: 300px;
+  overflow: scroll;
 }
 
 #content-panel div{
