@@ -206,13 +206,9 @@
   flex-direction: row;
 }
 
-.flex-center {
-  justify-content: center;
-}
-
-.flex-left{
-  align-items: left;
-}
+.flex-center { justify-content: center; }
+.apart{ justify-content: space-between; }
+.flex-left{ align-items: left; }
 
 .flex-center-vertical {
   -ms-align-items: center;

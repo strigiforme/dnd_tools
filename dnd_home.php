@@ -10,14 +10,15 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] = TRUE){
   <body class = "grid header-three-sections">
     <div class = "col-1-3 banner flex apart flex-center-vertical p-left-10 m-bottom-10">
       <h1 class = "primary-font banner-title"> D&D Tools </h1>
-      <div class = "login-status m-10">
-        <p class = "text-light"> Logged in as <?php echo $_SESSION['username']; ?> </p>
-
-      </div>
-      <div class="hamburger">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
+      <div class = "flex row flex-center-vertical">
+        <div class = "login-status m-10">
+          <p class = "text-light"> Logged in as <?php echo $_SESSION['username']; ?> </p>
+        </div>
+        <div class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
       </div>
     </div>
     <div id = "content-panel" class = "flex column p-10">
