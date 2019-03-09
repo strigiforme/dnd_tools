@@ -1,32 +1,3 @@
-/* Navbar - should be in a different CSS file */
-.navbar{
-  position: absolute;
-  right: -350px;
-  transition: 0.35s ease-out;
-  background-color: #BB0000;
-  height: 100%;
-  width: 350px;
-}
-
-#close:hover{
-    cursor: pointer;
-}
-#close{
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-/* Hamburger - should be in own CSS file later */
-
-.hamburger:hover{
-  cursor: pointer;
-}
-
-.hamburger{
-  margin: 0px 15px;
-}
-
-
 /* Cool scrollbar - also should be in own file */
 
 #content-panel::-webkit-scrollbar-track{

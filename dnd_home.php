@@ -64,6 +64,23 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] = TRUE){
     </div>
     <div class = "navbar" id = "mainnav">
       <i class="fas fa-times fa-2x" id = "close" style = "color:white;" onclick = "hidenav()"></i>
+      <div class = "flex column">
+        <div class = "navbar-item">
+          <a class = "navbar-link" href = "#"> Home </a>
+        </div>
+        <div class = "navbar-item">
+          <a class = "navbar-link" href = "#"> Account </a>
+        </div>
+        <div class = "navbar-item">
+          <a class = "navbar-link" href = "#"> Characters </a>
+        </div>
+        <div class = "navbar-item">
+          <a class = "navbar-link" href = "#"> Campaigns </a>
+        </div>
+        <div class = "navbar-item">
+          <a class = "navbar-link" href = "#"> Homebrew </a>
+        </div>
+      </div>
     </div>
   </body>
 </html>
