@@ -8,38 +8,44 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] = TRUE){
 <html>
   <?php include "includes/head.html"; ?>
   <body class = "grid header-three-sections">
-    <div class = "col-1-3 banner flex flex-center-vertical p-left-10 m-bottom-10">
+    <div class = "col-1-3 banner flex apart flex-center-vertical p-left-10 m-bottom-10">
       <h1 class = "primary-font banner-title"> D&D Tools </h1>
-      <div class = "login-status">
-        <p class = "text-light"> Logged in as <?php echo $_SESSION['username']; ?> </p>
+      <div class = "flex row flex-center-vertical">
+        <div class = "login-status m-10">
+          <p class = "text-light"> Logged in as <?php echo $_SESSION['username']; ?> </p>
+        </div>
+        <div class="hamburger" onclick = "shownav()">
+          <i class="fas fa-bars fa-3x" style = "color:white;"></i>
+        </div>
       </div>
     </div>
     <div id = "content-panel" class = "flex column p-10">
-      <div id = "characters">
+      <div class = "bubble-container" id = "characters">
         <p class =  "bubble-title">  Characters: </p>
         <div class = "bubble">
           <p class = "bubble-data"> No Characters yet! </p>
         </div>
       </div>
-      <div id = "campaigns">
+      <div class = "bubble-container" id = "campaigns">
         <p class = "bubble-title">  Campaigns: </p>
         <div class = "bubble">
           <p class = "bubble-data"> No Campaigns yet! </p>
         </div>
       </div>
-      <div id = "homebrew">
+      <div class = "bubble-container" id = "homebrew">
         <p class = "bubble-title"> Homebrew: </p>
         <div class = "bubble">
           <p class = "bubble-data"> No Homebrew yet! </p>
         </div>
       </div>
-      <div id = "users">
+      <div class = "bubble-container" id = "users">
         <p class = "bubble-title"> Users: </p>
         <?php
         // make query to get all Users
         $userQuery = "SELECT login_username, login_id from dnd_login";
+        //send query
         $userQueryResult = $conn->query($userQuery);
-
+        //check results
         if($userQueryResult){
           while($row = $userQueryResult->fetch_assoc()){
               echo "<div class = 'bubble'>";
@@ -55,6 +61,26 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] = TRUE){
       <hr/>
       <h2 class = "mainbody-header"> Sessions </h2>
       <hr/>
+    </div>
+    <div class = "navbar" id = "mainnav">
+      <i class="fas fa-times fa-2x" id = "close" style = "color:white;" onclick = "hidenav()"></i>
+      <div class = "flex column">
+        <div class = "navbar-item">
+          <a class = "navbar-link" href = "#"> Home </a>
+        </div>
+        <div class = "navbar-item">
+          <a class = "navbar-link" href = "#"> Account </a>
+        </div>
+        <div class = "navbar-item">
+          <a class = "navbar-link" href = "#"> Characters </a>
+        </div>
+        <div class = "navbar-item">
+          <a class = "navbar-link" href = "#"> Campaigns </a>
+        </div>
+        <div class = "navbar-item">
+          <a class = "navbar-link" href = "#"> Homebrew </a>
+        </div>
+      </div>
     </div>
   </body>
 </html>

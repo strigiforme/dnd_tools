@@ -10,3 +10,13 @@ function login(){
   signupButton.style.top = "0px";
   signupButton.style.transform = "rotateX(90deg)";
 }
+
+function shownav(){
+  nav = document.getElementById("mainnav");
+  nav.style.right = "0px";
+}
+
+function hidenav(){
+  nav = document.getElementById("mainnav");
+  nav.style.right = "-350px"
+}

@@ -1,15 +1,24 @@
-#characters{
-  background-color: rgba(0,200,0,0.5);
+/* Cool scrollbar - also should be in own file */
+
+#content-panel::-webkit-scrollbar-track{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 0px 2px;
+	background-color: #F5F5F5;
 }
-#campaigns{
-  background-color: rgba(255,0,0,0.5);
+
+#content-panel::-webkit-scrollbar{
+	width: 5px;
+	background-color: #F5F5F5;
 }
-#homebrew{
-  background-color: rgba(200,200,0,0.5);
+
+#content-panel::-webkit-scrollbar-thumb{
+	border-radius: 0px 2px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: gray;
 }
-#users{
-  background-color: rgba(100,100,255,0.5);
-}
+
+/* Bubbles - belong in another style file */
+
 .mainbody-header{
   font-size: 30px;
   font-weight: 200;
@@ -17,24 +26,34 @@
 }
 
 .home{
-  border-left: 10px solid red;
+  border-left: 10px solid #333;
   border-radius: 2px;
   background-color: #DDD;
+}
+
+.bubble-container{
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: #BB0000;
 }
 
 .bubble{
   width: 100%;
   min-height: 50px;
   border-radius: 5px;
-  background-color: #CDCDCD;
   margin-bottom: 5px;
+  padding: 5px 0px;
+  background-color: white;
+  box-shadow: inset 0px 0px 3px #330000;
 }
 
 .bubble-title{
   font-family: "PT Serif";
+  color: white;
   font-size: 20px;
   font-weight: 400;
-  margin: 0px;
+  margin: 3px 3px 8px 3px;
 }
 
 .bubble-data{
@@ -45,13 +64,15 @@
   font-weight: 400;
 }
 
+/* Actual styles unique to this page */
+
 .header-three-sections{
   grid-template-columns: 300px 350px auto;
   grid-template-rows: 70px auto;
 }
 
 .banner{
-  background-color: #003366;
+  background-color: #333;
   border-radius: 2px;
 }
 
@@ -69,10 +90,5 @@
   grid-row-end: 3;
   background-color: #DDD;
   max-width: 300px;
-}
-
-#content-panel div{
-  padding: 5px;
-  border-radius: 5px;
-  margin-bottom: 10px;
+  overflow: scroll;
 }
