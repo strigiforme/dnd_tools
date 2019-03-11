@@ -4,7 +4,6 @@ function sanitize ($sanitizeThisThing) {
   $sanitizedThing = trim($sanitizeThisThing);
   $sanitizedThing = stripslashes($sanitizedThing);
   $sanitizedThing = htmlspecialchars($sanitizedThing);
-
   return $sanitizedThing;
 }
 
@@ -24,10 +23,14 @@ function submit_user($user,$pass,$email,$conn){
     if(!($submit_user->bind_param("sssi",$username,$password,$user_email,$salt))){
       return "Failed to Bind SQL Prepare: (" . $submit_user->errno . ") " . $submit_user->error;
     } else {
-      if(!($submit_user->execute())){
-        return "Query execution failed: (" . $submit_user->errno . ")" . $submit_user->error;
+      if($submit_user->execute()) {
+        $_SESSION['new_user'] = True;
+        //get users id set up in session
+        login_user($user,$pass,$conn);
+        //send to fill in more info
+        header("Location:new_account.php");
       } else {
-        return "You're all signed up!";
+        return "Query execution failed: (" . $submit_user->errno . ")" . $submit_user->error;
       }
     }
   }

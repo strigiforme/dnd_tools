@@ -37,7 +37,7 @@
   <body class = "grid three-sections">
     <div class = "col-2">
       <h1 class = "title block m-auto m-bottom-15"> Howard's 5e Tools </h1>
-      <form method = "POST">
+      <form action = "index.php" method = "POST">
         <div class = "input-container">
           <input name = "username" class = "form-input primary-font" type = "text" placeholder="Username"/> <br/>
         </div>

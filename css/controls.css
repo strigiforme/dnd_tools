@@ -12,6 +12,10 @@
     min-width: 15%;
 }
 
+form{
+  flex-shrink: 0;
+}
+
 .btn{
     padding-top: 7px;
     border-radius: 3px;

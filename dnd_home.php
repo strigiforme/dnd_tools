@@ -6,7 +6,9 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] = TRUE){
 
 <!DOCTYPE html>
 <html>
+  <head>
   <?php include "includes/head.html"; ?>
+  </head>
   <body class = "grid header-three-sections">
     <div class = "col-1-3 banner flex apart flex-center-vertical p-left-10 m-bottom-10">
       <h1 class = "primary-font banner-title"> D&D Tools </h1>
