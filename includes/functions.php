@@ -7,6 +7,28 @@ function sanitize ($sanitizeThisThing) {
   return $sanitizedThing;
 }
 
+function get_user_stats($user_id,$conn){
+  //clean data
+  $user_id = sanitize($user_id);
+
+  //query for users profile info
+  if(!($submit_user = $conn->prepare("SELECT user_alias,user_description,user_color,user_class FROM dnd_users WHERE login_id = (?)"))){
+    echo "SQL Prepare failed: (" . $conn->errno . ") " . $conn->error;
+  } else {
+    if(!($submit_user->bind_param("i",$user_id))){
+      echo "Failed to Bind SQL Prepare: (" . $submit_user->errno . ") " . $submit_user->error;
+    } else {
+      if(!($submit_user->execute())){
+        echo "Query execution failed: (" . $submit_user->errno . ")" . $submit_user->error;
+      } else {
+        $submit_user->bind_result($_SESSION['user_alias'],$_SESSION['user_description'],$_SESSION['user_color'],$_SESSION['user_class']);
+        $submit_user->store_result();
+        $submit_user->fetch();
+      }
+    }
+  }
+}
+
 function submit_user($user,$pass,$email,$conn){
   //clean up inputs to avoid injection
   $username = sanitize($user);

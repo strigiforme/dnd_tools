@@ -1,5 +1,11 @@
 /* Structural styling (DOM width / height manipulation) */
-
+.rounded{
+  border-radius: 4px;
+}
+hr{
+  margin-left: 0px;
+  margin-right: 0px;
+}
 /* Generic layout styles */
 .noverflow { overflow: hidden; }
 .full-height { height: 100%; }
@@ -205,7 +211,9 @@
   -ms-flex-direction: row;
   flex-direction: row;
 }
-
+.flex-grow{
+  flex-grow: 1;
+}
 .flex-center { justify-content: center; margin: 0px auto;}
 .apart{ justify-content: space-between; }
 .flex-left{ align-items: left; }
