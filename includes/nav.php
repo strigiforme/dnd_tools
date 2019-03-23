@@ -16,5 +16,8 @@
     <div class = "navbar-item">
       <a class = "navbar-link" href = "#"> Homebrew </a>
     </div>
+    <div class = "navbar-item">
+      <a class = "navbar-link" href = "logout.php"> Logout </a>
+    </div>
   </div>
 </div>

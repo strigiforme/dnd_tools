@@ -37,29 +37,31 @@
   <body class = "grid three-sections">
     <div class = "col-2">
       <h1 class = "title block m-auto m-bottom-15"> Howard's 5e Tools </h1>
-      <form action = "index.php" method = "POST">
-        <div class = "input-container">
-          <input name = "username" class = "form-input primary-font" type = "text" placeholder="Username"/> <br/>
+      <?php if(!isset($_SESSION['loggedin'])) { ?>
+        <form action = "index.php" method = "POST">
+          <div class = "input-container">
+            <input name = "username" class = "form-input primary-font" type = "text" placeholder="Username"/> <br/>
+          </div>
+          <div class = "input-container">
+            <input name = "password" class = "form-input primary-font" type = "password" placeholder="Password"/>
+          </div>
+          <div class = "input-container hidden m-bottom-10" >
+            <input id = "email" class = "form-input primary-font" name = "email" type = "input" placeholder="Email"/>
+          </div>
+          <div>
+            <input id = "submit" name = "submit" class = "btn secondary-font bg-red m-bottom-10" type = "submit" value = "Continue"/>
+          </div>
+        </form>
+        <button id = "signup" class = "btn secondary-font bg-lightblue" onclick = "login()"> Sign Up </button>
+        <div class = "flex flex-center">
+            <?php if(isset($login_result)){echo $login_result;} ?>
         </div>
-        <div class = "input-container">
-          <input name = "password" class = "form-input primary-font" type = "password" placeholder="Password"/>
-        </div>
-        <div class = "input-container hidden m-bottom-10" >
-          <input id = "email" class = "form-input primary-font" name = "email" type = "input" placeholder="Email"/>
-        </div>
+      </div>
+      <div class = "col-3">
         <div>
-          <input id = "submit" name = "submit" class = "btn secondary-font bg-red m-bottom-10" type = "submit" value = "Continue"/>
-        </div>
-      </form>
-      <button id = "signup" class = "btn secondary-font bg-lightblue" onclick = "login()"> Sign Up </button>
-      <div class = "flex flex-center">
-          <?php if(isset($login_result)){echo $login_result;} ?>
-      </div>
-    </div>
-    <div class = "col-3">
-      <div>
 
+        </div>
       </div>
-    </div>
+    <?php } ?>
   </body>
 </html>
